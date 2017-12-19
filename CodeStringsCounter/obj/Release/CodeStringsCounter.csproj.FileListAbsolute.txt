@@ -1,0 +1,7 @@
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\bin\Release\CodeStringsCounter.exe.config
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\bin\Release\CodeStringsCounter.exe
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\bin\Release\CodeStringsCounter.pdb
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Release\CodeStringsCounter.csproj.CoreCompileInputs.cache
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Release\CodeStringsCounter.exe
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Release\CodeStringsCounter.pdb
+C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Release\CodeStringsCounter.csprojResolveAssemblyReference.cache
