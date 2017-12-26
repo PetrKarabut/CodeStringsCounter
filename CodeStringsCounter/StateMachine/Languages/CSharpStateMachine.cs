@@ -23,19 +23,20 @@ namespace CodeStringsCounter
         public const string openSmallCommentWord = "//";
         public const string openBigCommentWord = "/*";
         public const string closeBigCommentWord = "*/";
-        
+
 
         public StateMachineStructure GetMachineStructure()
         {
-            var machine = new StateMachineStructure();
+            var machine = new StateMachineStructure()
+            {
 
-            machine.States = new List<string> { normalState, oneQuoteState, doubleQuoteState, smallCommentState, bigCommentState };
-            machine.Words = new List<string> { defaultWord, newLineWord, oneQuoteWord, doubleQuoteWord, openSmallCommentWord, openBigCommentWord, closeBigCommentWord };
-            machine.startStateIndex = 0;
-            machine.defaultWordIndex = 0;
-            machine.newLineWordIndex = 1;
-           
-            machine.Transitions = new List<Transition>();
+                States = new List<string> { normalState, oneQuoteState, doubleQuoteState, smallCommentState, bigCommentState },
+                Words = new List<string> { defaultWord, newLineWord, oneQuoteWord, doubleQuoteWord, openSmallCommentWord, openBigCommentWord, closeBigCommentWord },
+                StartStateIndex = 0,
+                DefaultWordIndex = 0,
+                NewLineWordIndex = 1,
+                Transitions = new List<Transition>()
+            };
 
             //переходы
             machine.AddTransition(normalState, defaultWord, normalState, true);

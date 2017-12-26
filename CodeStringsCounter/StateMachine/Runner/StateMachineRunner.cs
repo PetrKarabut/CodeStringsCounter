@@ -32,7 +32,7 @@ namespace CodeStringsCounter
         public StateMachineRunner(StateMachineStructure machine)
         {
             this.machine = machine;
-            currentState = machine.startStateIndex;
+            currentState = machine.StartStateIndex;
             destinations = new int[machine.States.Count, machine.Words.Count];
             countBoolArray = new bool[machine.States.Count, machine.Words.Count];
 
@@ -56,7 +56,7 @@ namespace CodeStringsCounter
                 var list = new List<string>();
                 foreach (Transition transition in machine.Transitions)
                 {
-                    if (transition.DepartureIndex == i)
+                    if (transition.DepartureIndex == i && transition.WordIndex != machine.DefaultWordIndex && transition.WordIndex != machine.NewLineWordIndex)
                     {
                         list.Add(machine.Words[transition.WordIndex]);
                     }
@@ -65,12 +65,12 @@ namespace CodeStringsCounter
                 statesWords[i] = new WordsSet(list, machine.Words);
             }
 
-            currentWordsSet = statesWords[machine.startStateIndex];
+            currentWordsSet = statesWords[machine.StartStateIndex];
         }
 
         private void Command(int wordIndex)
         {
-            if (wordIndex == machine.newLineWordIndex)
+            if (wordIndex == machine.NewLineWordIndex)
             {
                 thisStringCounted = false;
             }
@@ -114,7 +114,7 @@ namespace CodeStringsCounter
 
                 if (isDefault)
                 {
-                    Command(machine.defaultWordIndex);
+                    Command(machine.DefaultWordIndex);
                 }
             }
         }
@@ -123,6 +123,11 @@ namespace CodeStringsCounter
 
         public void RunMachine(StreamReader reader)
         {
+            if (reader.EndOfStream)
+            {
+                return;
+            }
+
             while (true)
             {
                 RunString(reader.ReadLine());
@@ -130,7 +135,7 @@ namespace CodeStringsCounter
                 {
                     break;
                 }
-                Command(machine.newLineWordIndex);
+                Command(machine.NewLineWordIndex);
             }
         }
 

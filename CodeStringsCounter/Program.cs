@@ -12,7 +12,7 @@ namespace CodeStringsCounter
         static void Main(string[] args)
         {
             string format;
-            if (args == null || args.Length == 0 || args[0] == null)
+            if (args.Length == 0)
             {
                 Console.WriteLine("введите формат файлов(например *.cs)");
                 format = Console.ReadLine();
@@ -26,9 +26,9 @@ namespace CodeStringsCounter
             string currentPath = Directory.GetCurrentDirectory();
             try
             {
-                dirs = Directory.GetFiles(currentPath, format, SearchOption.AllDirectories);
+                dirs = Directory.GetFiles(Directory.GetCurrentDirectory(), format, SearchOption.AllDirectories);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("ПОИСК ФАЙЛОВ НЕ УДАЛСЯ");
                 Console.WriteLine();
@@ -47,7 +47,17 @@ namespace CodeStringsCounter
                 using (var reader = new StreamReader(path))
                 {
                     runner.RunMachine(reader);
-                    string shortPath = path.Remove(0, currentPath.Length + 1);
+                   
+                    var parent = Directory.GetParent(path);
+                    var shortPath = Path.GetFileName(path);
+
+                    while (parent.FullName != currentPath)
+                    {
+                        shortPath = Path.Combine(parent.Name, shortPath);
+                        parent = Directory.GetParent(parent.FullName);
+                    }
+
+
                     Console.WriteLine(shortPath + "       " + runner.StringsCount);
                     count += runner.StringsCount;
                 }

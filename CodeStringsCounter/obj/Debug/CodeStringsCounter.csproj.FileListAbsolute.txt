@@ -5,3 +5,10 @@ C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\Co
 C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.csproj.CoreCompileInputs.cache
 C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.exe
 C:\Users\Петр\Desktop\CodeStringsCounter\Drafts\Draft4\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.pdb
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\bin\Debug\CodeStringsCounter.exe.config
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\bin\Debug\CodeStringsCounter.exe
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\bin\Debug\CodeStringsCounter.pdb
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.csprojResolveAssemblyReference.cache
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.csproj.CoreCompileInputs.cache
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.exe
+C:\Users\Петр\Desktop\CodeStrings\CodeStringsCounter\CodeStringsCounter\obj\Debug\CodeStringsCounter.pdb

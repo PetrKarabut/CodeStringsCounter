@@ -11,17 +11,19 @@ namespace CodeStringsCounter
         public List<string> States { get; set; }
         public List<string> Words { get; set; }
         public List<Transition> Transitions { get; set; }
-        public int startStateIndex { get; set; }
-        public int defaultWordIndex { get; set; }
-        public int newLineWordIndex { get; set; }
+        public int StartStateIndex { get; set; }
+        public int DefaultWordIndex { get; set; }
+        public int NewLineWordIndex { get; set; }
 
         public void AddTransition(string from, string word, string to, bool count)
         {
-            Transition transition = new Transition();
-            transition.DepartureIndex = States.IndexOf(from);
-            transition.WordIndex = Words.IndexOf(word);
-            transition.DestinationIndex = States.IndexOf(to);
-            transition.CountAfterTransition = count;
+            var transition = new Transition()
+            {
+                DepartureIndex = States.IndexOf(from),
+                WordIndex = Words.IndexOf(word),
+                DestinationIndex = States.IndexOf(to),
+                CountAfterTransition = count
+            };
 
             Transitions.Add(transition);
         }
